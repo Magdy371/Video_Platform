@@ -1,0 +1,38 @@
+{
+  "monorepo": true,
+  "root": "apps/main",
+  "sourceRoot": "apps/main/src",
+  "compilerOptions": {
+    "builder": "rspack",
+    "tsConfigPath": "apps/main/tsconfig.app.json"
+  },
+  "projects": {
+    "main": {
+      "type": "application",
+      "root": "apps/main",
+      "entryFile": "main",
+      "sourceRoot": "apps/main/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/main/tsconfig.app.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    },
+    "worker": {
+      "type": "application",
+      "root": "apps/worker",
+      "entryFile": "main",
+      "sourceRoot": "apps/worker/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/worker/tsconfig.app.json"
+      }
+    }
+  }
+}
